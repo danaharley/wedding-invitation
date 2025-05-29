@@ -22,7 +22,7 @@ export const Venue = () => {
         <div className="w-full md:w-fit mx-auto h-fit grid grid-cols-1 md:grid-cols-2 border md:border-0 rounded-lg">
           <VenueInfo
             className="md:border-r"
-            title="Resepsi Pernikahan"
+            title="Akad Nikah"
             day="Minggu"
             date="08"
             month="Juni"
