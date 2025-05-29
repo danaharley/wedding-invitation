@@ -40,7 +40,8 @@ export const OurStory = () => {
           <p>
             Gk ada yang perlu di jelaskan kayaknya.. ya seperti orang pada
             umumnya petama kali kerumah pasangan. Ditanya kerja dimana, kenal
-            dimana, sudah lama kah dll.. oh iyaa hana bawa Martabak 😁.
+            dimana, sudah lama kah dll.. oh iyaa Hana bawa Donat Bahagia biar
+            bahagia katanya dia sih 😁.
           </p>
         </StoryItem>
         <StoryItem
@@ -60,8 +61,8 @@ export const OurStory = () => {
           <p>
             Fotonya pake foto Prewedding dulu yaa.. belum tanggal{" "}
             <span className="text-amber-600">8 juni 2025</span> bro pada saat
-            undangan digital ini dibuat. Ini aku ketik masih tanggal 15 Mei
-            2025. Btw undangan digital nya aku bikin sendiri 😘.
+            undangan digital ini dibuat. Ini aku ketik masih tanggal 15 Mei 2025
+            😘.
           </p>
         </StoryItem>
       </ol>
