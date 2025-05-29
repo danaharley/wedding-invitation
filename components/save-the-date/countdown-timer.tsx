@@ -1,17 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState, useMemo } from "react";
+import { useMemo } from "react";
 
 import { useAddToGoogleCalendar } from "@/hooks/use-add-to-google-calendar";
+import { useCountdown } from "@/hooks/use-countdown";
 
-import { formatDate, getRemainingTime } from "@/lib/utils";
+import { formatDate } from "@/lib/utils";
 
 const EVENT_DATE = "2025-06-10T12:30:00+07:00";
 
 export const CountdownTimer = () => {
-  const [timeRemaining, setTimeRemaining] = useState<number | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
+  const timeRemaining = useCountdown(EVENT_DATE);
   const addToCalendar = useAddToGoogleCalendar();
 
   const handleClick = () => {
@@ -27,25 +26,6 @@ export const CountdownTimer = () => {
       end,
     });
   };
-
-  useEffect(() => {
-    const targetTime = new Date(EVENT_DATE).getTime();
-    const updateRemaining = () => {
-      const remaining = getRemainingTime(targetTime);
-      setTimeRemaining(remaining);
-
-      if (remaining <= 0 && intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-
-    updateRemaining();
-    intervalRef.current = setInterval(updateRemaining, 1000);
-
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, []);
 
   const formattedTime = useMemo(() => {
     if (timeRemaining === null) return null;
@@ -65,7 +45,7 @@ export const CountdownTimer = () => {
 
   if (timeRemaining === null) return null; // Skip SSR render
 
-  if (timeRemaining <= 0) {
+  if (timeRemaining !== null && timeRemaining <= 0) {
     return (
       <div className="flex items-center justify-center font-mulish text-amber-900/45">
         <p className="text-center text-[min(17vw,5rem)] leading-none font-black">

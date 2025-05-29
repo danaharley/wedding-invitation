@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 import { useClipboard } from "@/hooks/use-clipboard";
+import { useCountdown } from "@/hooks/use-countdown";
 
 type Props = {
   bankName: string;
@@ -11,6 +12,8 @@ type Props = {
   accountHolder: string;
 };
 
+const EVENT_DATE = "2025-06-10T12:30:00+07:00";
+
 export const BankCard = ({
   bankName,
   imgSrc,
@@ -18,11 +21,20 @@ export const BankCard = ({
   accountHolder,
 }: Props) => {
   const { isCopied, copy } = useClipboard();
+  const timeLeft = useCountdown(EVENT_DATE);
+
+  const handleCopy = () => {
+    if (timeLeft !== null && timeLeft <= 0) {
+      copy("xxxxxxxx");
+    } else {
+      copy(accountNumber);
+    }
+  };
 
   return (
     <div
       className="relative w-full h-28 md:h-40 hover:cursor-pointer"
-      onClick={() => copy(accountNumber)}
+      onClick={handleCopy}
     >
       <Image
         src={imgSrc}
@@ -34,7 +46,7 @@ export const BankCard = ({
       <div className="absolute w-full h-full flex flex-col justify-end text-white bg-amber-950/90 p-2">
         <p className="text-xs">No. Rekening:</p>
         <p className="font-mono text-xl font-bold tracking-wide">
-          {accountNumber}
+          {timeLeft ? accountNumber : "xxxxxxxx"}
         </p>
         <p className="text-xs">a/n {accountHolder}</p>
       </div>
