@@ -29,7 +29,7 @@ export const siteConfig = {
       ourStory: [
         "https://res.cloudinary.com/nubicoder/image/upload/v1748004687/projects/wedding-invitation/opdv1acvhfl1vssccb3m.jpg",
         "https://res.cloudinary.com/nubicoder/image/upload/v1748004682/projects/wedding-invitation/vpi3bmla9m2srsmqwf1t.jpg",
-        "https://res.cloudinary.com/nubicoder/image/upload/v1748004645/projects/wedding-invitation/vbl1nq4cjeyv9prlbsfs.jpg",
+        "https://res.cloudinary.com/nubicoder/image/upload/v1748505791/projects/wedding-invitation/ib0c8tqjpasquggt2wg8.jpg",
         "https://res.cloudinary.com/nubicoder/image/upload/v1748002693/projects/wedding-invitation/oy74ah7s6ubhi99bw28f.jpg",
       ],
       ourGallery: [
