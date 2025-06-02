@@ -33,7 +33,7 @@ export const BankCard = ({
 
   return (
     <div
-      className="relative w-full h-28 md:h-40 hover:cursor-pointer"
+      className="relative h-28 w-full hover:cursor-pointer md:h-40"
       onClick={handleCopy}
     >
       <Image
@@ -43,7 +43,7 @@ export const BankCard = ({
         className="object-cover object-center"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 85vw, 90vw"
       />
-      <div className="absolute w-full h-full flex flex-col justify-end text-white bg-amber-950/90 p-2">
+      <div className="absolute flex h-full w-full flex-col justify-end bg-amber-950/90 p-2 text-white">
         <p className="text-xs">No. Rekening:</p>
         <p className="font-mono text-xl font-bold tracking-wide">
           {timeLeft ? accountNumber : "xxxxxxxx"}
@@ -51,7 +51,7 @@ export const BankCard = ({
         <p className="text-xs">a/n {accountHolder}</p>
       </div>
 
-      <p className="absolute top-0 right-0 text-xs text-white p-1.5">
+      <p className="absolute top-0 right-0 p-1.5 text-xs text-white">
         {isCopied ? "Copied" : "Click to copy"}
       </p>
     </div>

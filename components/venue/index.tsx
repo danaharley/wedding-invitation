@@ -7,21 +7,21 @@ import { siteConfig } from "@/config";
 
 export const Venue = () => {
   return (
-    <SectionWrapper className="h-[850px] md:h-[600px] lg:h-[740px] mb-8 p-0 md:p-0 md:mb-16">
-      <div className="absolute inset-0 bg-black/45 z-10" />
+    <SectionWrapper className="mb-8 h-[850px] p-0 md:mb-16 md:h-[600px] md:p-0 lg:h-[740px]">
+      <div className="absolute inset-0 z-10 bg-black/45" />
       <NextImage
         src={siteConfig.assets.images.venue}
         alt="Dana & Hana"
         className="grayscale 2xl:object-[100%_51%]"
       />
-      <div className="absolute z-10 w-full p-6 flex flex-col gap-6 lg:p-8 lg:gap-16">
+      <div className="absolute z-10 flex w-full flex-col gap-6 p-6 lg:gap-16 lg:p-8">
         <Heading
           title="Venue"
-          className="text-white/25 text-center text-6xl md:text-8xl"
+          className="text-center text-6xl text-white/25 md:text-8xl"
         />
-        <div className="w-full md:w-fit mx-auto h-fit grid grid-cols-1 md:grid-cols-2 border md:border-0 rounded-lg">
+        <div className="mx-auto grid h-fit w-full grid-cols-1 rounded-lg border border-white/25 md:w-fit md:grid-cols-2 md:border-0">
           <VenueInfo
-            className="md:border-r"
+            className="md:border-r md:border-white/25"
             title="Akad Nikah"
             day="Minggu"
             date="08"
@@ -37,7 +37,7 @@ export const Venue = () => {
             date="10"
             month="Juni"
             year="2025"
-            time="12.30 - selesai"
+            time="18.00 - selesai"
             location="Kediaman Mempelai Pria"
             address="Tambakdono RT 01 RW 07, Sumber Rejo, Kec. Pakal, Surabaya."
           />

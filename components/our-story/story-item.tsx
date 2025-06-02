@@ -24,7 +24,7 @@ export const StoryItem = ({
         {date}
       </time>
       <h3 className="text-lg font-medium text-amber-600">{title}</h3>
-      <div className="relative aspect-video my-2.5 rounded-lg overflow-hidden">
+      <div className="relative my-2.5 aspect-video overflow-hidden rounded-lg">
         <NextImage
           src={imgPath}
           alt={title}

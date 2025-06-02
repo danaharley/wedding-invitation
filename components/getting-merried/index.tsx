@@ -6,7 +6,7 @@ import { siteConfig } from "@/config";
 
 export const GettingMerried = () => {
   return (
-    <SectionWrapper className="max-w-4xl mx-auto" id="main">
+    <SectionWrapper className="mx-auto max-w-4xl" id="main">
       <Heading
         type="multiple"
         title="We are"
@@ -14,7 +14,7 @@ export const GettingMerried = () => {
         description="we’d be delighted if you could join our wedding!"
         className="py-16"
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <WeddingCouple
           couple="Muhammad Harliansyah Wardana, S.Kom"
           coupleInfo={{

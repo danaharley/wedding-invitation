@@ -16,11 +16,11 @@ export const Heading = (props: HeadingProps) => {
   return (
     <div
       className={cn(
-        "font-prata text-3xl md:text-5xl text-white md:text-center",
-        props.className
+        "font-prata text-3xl text-white md:text-center md:text-5xl",
+        props.className,
       )}
     >
-      <h1 className="capitalize font-bold">
+      <h1 className="font-bold capitalize">
         {props.type === "multiple" ? (
           <>
             {`${props.title}`} <br /> {`${props.subTitle}`}
@@ -32,8 +32,8 @@ export const Heading = (props: HeadingProps) => {
       {props.description && (
         <p
           className={cn(
-            "font-medium text-sm mt-2 md:text-base",
-            props.descriptionClassName
+            "mt-2 text-sm font-medium md:text-base",
+            props.descriptionClassName,
           )}
         >
           {props.description}

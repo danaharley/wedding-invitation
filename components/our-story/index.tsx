@@ -8,12 +8,12 @@ import { siteConfig } from "@/config";
 
 export const OurStory = () => {
   return (
-    <SectionWrapper className="max-w-4xl mx-auto">
+    <SectionWrapper className="mx-auto max-w-4xl">
       <Heading
         title="Our Story"
         description="A short story about the two of us"
       />
-      <ol className="relative border-s border-amber-900 mt-6 md:mt-8 flex flex-col gap-8 md:gap-10">
+      <ol className="relative mt-6 flex flex-col gap-8 border-s border-amber-900 md:mt-8 md:gap-10">
         <StoryItem
           date="5 Oktober 2024"
           title="Awal pacaran"
@@ -25,7 +25,7 @@ export const OurStory = () => {
             <Link
               href="https://www.instagram.com/volendamcafe"
               target="_blank"
-              className="underline text-amber-600"
+              className="text-amber-600 underline"
             >
               Kayutangan Malang.
             </Link>{" "}

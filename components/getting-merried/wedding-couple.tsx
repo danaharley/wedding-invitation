@@ -13,9 +13,9 @@ type Props = {
 
 export const WeddingCouple = ({ couple, coupleInfo, imgPath }: Props) => {
   return (
-    <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
+    <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
       <NextImage src={imgPath} alt={couple} />
-      <div className="absolute bottom-0 bg-amber-900/45 p-2 w-full h-fit text-white">
+      <div className="absolute bottom-0 h-fit w-full bg-amber-900/45 p-2 text-white">
         <p className={`${belove.className} text-[min(21px,6vw)] text-white`}>
           {couple}
         </p>

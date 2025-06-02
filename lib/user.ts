@@ -14,7 +14,7 @@ export const getUsers = async (): Promise<User[] | null> => {
 
 export const getUserByGroup = async (
   group: string,
-  name: string
+  name: string,
 ): Promise<User | null> => {
   try {
     if (!group || !name) {

@@ -45,7 +45,7 @@ export const WishForm = ({ user }: Props) => {
 
   return (
     <form
-      className="max-w-2xl mx-auto flex flex-col border p-6 rounded-lg border-amber-900 gap-4 bg-amber-600/5"
+      className="mx-auto flex max-w-2xl flex-col gap-4 rounded-lg border border-amber-900 bg-amber-600/5 p-6"
       onSubmit={handleSubmit(onSubmit)}
     >
       <input
@@ -53,24 +53,24 @@ export const WishForm = ({ user }: Props) => {
         value={user.name}
         type="text"
         placeholder="Name"
-        className="rounded-md px-3 py-2 text-amber-600 border uppercase bg-amber-950 border-amber-800/35 focus:outline-1 transition duration-150 outline-none focus:shadow focus:border-amber-900 disabled:cursor-not-allowed font-semibold"
+        className="rounded-md border border-amber-800/35 bg-amber-950 px-3 py-2 font-semibold text-amber-600 uppercase transition duration-150 outline-none focus:border-amber-900 focus:shadow focus:outline-1 disabled:cursor-not-allowed"
       />
       {user.id === 0 && (
-        <p className="text-rose-500 text-xs -mt-2.5">
+        <p className="-mt-2.5 text-xs text-rose-500">
           Hanya tamu terdaftar yang bisa kirim ucapan.
         </p>
       )}
       <textarea
         placeholder="Write your wishes"
         disabled={disabled}
-        className="rounded-md px-3 py-2 min-h-24 md:min-h-32 text-amber-50 border bg-amber-950 border-amber-800/35 focus:outline-1 transition duration-150 outline-none focus:shadow focus:border-amber-900 disabled:cursor-not-allowed"
+        className="min-h-24 rounded-md border border-amber-800/35 bg-amber-950 px-3 py-2 text-amber-50 transition duration-150 outline-none focus:border-amber-900 focus:shadow focus:outline-1 disabled:cursor-not-allowed md:min-h-32"
         {...register("message", { required: true })}
       />
 
       <button
         type="submit"
         disabled={disabled}
-        className="bg-amber-500 px-3 py-2 rounded-md font-semibold tracking-tight hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
+        className="rounded-md bg-amber-500 px-3 py-2 font-semibold tracking-tight hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
       >
         {isLoading ? "Sending..." : "Send"}
       </button>

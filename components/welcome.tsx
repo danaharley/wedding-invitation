@@ -8,14 +8,14 @@ import { siteConfig } from "@/config";
 
 export const Welcome = () => {
   return (
-    <SectionWrapper className="p-0 md:p-0 h-dvh mt-2">
+    <SectionWrapper className="mt-2 h-dvh p-0 md:p-0">
       <NextImage
         src={siteConfig.assets.images.welcome}
         alt="Dana & Hana"
         className="2xl:object-[100%_30%]"
       />
-      <div className="absolute grid grid-cols-1 grid-rows-6 w-full h-full place-items-center bg-black/10">
-        <div className="row-start-5 text-white flex flex-col items-center h-full w-full">
+      <div className="absolute grid h-full w-full grid-cols-1 grid-rows-6 place-items-center bg-black/10">
+        <div className="row-start-5 flex h-full w-full flex-col items-center text-white">
           <Heading
             title="Dana & Hana"
             description="We are getting married!"
@@ -33,7 +33,7 @@ export const Welcome = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="animate-bounce mt-2 md:mt-10"
+              className="mt-2 animate-bounce md:mt-10"
             >
               <path d="M12 5v14" />
               <path d="m19 12-7 7-7-7" />

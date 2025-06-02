@@ -47,7 +47,7 @@ export const CountdownTimer = () => {
 
   if (timeRemaining !== null && timeRemaining <= 0) {
     return (
-      <div className="flex items-center justify-center font-mulish text-amber-900/45">
+      <div className="font-mulish flex items-center justify-center text-amber-900/45">
         <p className="text-center text-[min(17vw,5rem)] leading-none font-black">
           Acara Selesai
         </p>
@@ -61,7 +61,7 @@ export const CountdownTimer = () => {
       role="button"
       onClick={handleClick}
     >
-      <div className="flex items-center gap-2 font-prata text-sm md:textbas font-semibold text-amber-600 md:justify-center">
+      <div className="font-prata md:textbas flex items-center gap-2 text-sm font-semibold text-amber-600 md:justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="23"
@@ -80,7 +80,7 @@ export const CountdownTimer = () => {
         </svg>
         {formatDate(EVENT_DATE)}
       </div>
-      <div className="flex items-center justify-center font-mulish text-amber-900/45">
+      <div className="font-mulish flex items-center justify-center text-amber-900/45">
         <p className="text-center text-[min(17vw,10rem)] leading-none font-black">
           {formattedTime?.days}:<span className="block text-base">days</span>
         </p>

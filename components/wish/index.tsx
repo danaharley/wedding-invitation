@@ -29,7 +29,7 @@ export const Wish = async ({ user }: Props) => {
       {/* <div className="mx-auto mt-16 columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6 2xl:max-w-7xl">
         <WishCard messages={messages} />
       </div> */}
-      <div className="mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 2xl:max-w-7xl">
+      <div className="mx-auto mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:max-w-7xl">
         <WishCard messages={messages} />
       </div>
       <div>
@@ -37,7 +37,7 @@ export const Wish = async ({ user }: Props) => {
           <div className="flex items-center justify-center">
             <Heading
               title="No Messages"
-              className="text-lg font-sans md:text-xl"
+              className="font-sans text-lg md:text-xl"
             />
           </div>
         )}

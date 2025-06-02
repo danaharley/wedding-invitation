@@ -44,5 +44,5 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
 export const createWeddingMessage = createSafeAction(
   CreateWeddingMessageSchema,
-  handler
+  handler,
 );

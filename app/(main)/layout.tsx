@@ -33,9 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${allura.variable} ${prata.variable} ${mulish.variable} antialiased bg-amber-950`}
+        className={`${geistSans.variable} ${geistMono.variable} ${allura.variable} ${prata.variable} ${mulish.variable} bg-amber-950 antialiased`}
       >
-        <div className="flex flex-col min-h-dvh">
+        <div className="flex min-h-dvh flex-col">
           <main className="relative flex-1">
             <Toaster richColors />
             <AudioAutoplayProvider>{children}</AudioAutoplayProvider>
