@@ -12,7 +12,7 @@ type Props = {
   accountHolder: string;
 };
 
-const EVENT_DATE = "2025-06-10T12:30:00+07:00";
+const EVENT_DATE = "2025-06-30T12:30:00+07:00";
 
 export const BankCard = ({
   bankName,
